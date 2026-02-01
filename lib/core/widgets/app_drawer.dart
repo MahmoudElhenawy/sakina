@@ -12,11 +12,12 @@ class AppDrawer extends StatelessWidget {
       backgroundColor: AppColors.backgroundScaffold,
       child: Column(
         children: [
+          const SizedBox(height: 20),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 40),
             decoration: const BoxDecoration(
-              color: AppColors.primaryColor,
+              color: AppColors.cardBackground,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(24),
                 bottomRight: Radius.circular(24),
@@ -26,7 +27,7 @@ class AppDrawer extends StatelessWidget {
               'سَكِينَة',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: AppColors.secondaryColor,
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
               ),
@@ -46,10 +47,10 @@ class AppDrawer extends StatelessWidget {
 
   Widget _drawerItem(IconData icon, String title) {
     return ListTile(
-      leading: Icon(icon, color: AppColors.primaryColor),
+      leading: Icon(icon, color: AppColors.secondaryColor),
       title: Text(
         title,
-        style: const TextStyle(fontSize: 15, color: Color(0xFF1C2A24)),
+        style: const TextStyle(fontSize: 15, color: AppColors.textPrimary),
       ),
       onTap: () {},
     );
