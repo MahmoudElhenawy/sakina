@@ -1,8 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:sakina/core/utils/constant.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  final bool showMenu;
+
+  const CustomAppBar({super.key, this.showMenu = true});
 
   @override
   Size get preferredSize => const Size.fromHeight(82);
@@ -10,6 +14,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       decoration: BoxDecoration(
         color: AppColors.cardBackground,
         borderRadius: const BorderRadius.vertical(bottom: Radius.circular(26)),
@@ -28,31 +33,32 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              // العنوان
               const Text(
                 'سَكِينَة',
                 style: TextStyle(
                   color: AppColors.secondaryColor,
                   fontSize: 22,
-                  fontWeight: FontWeight.w600,
+                  fontFamily: 'cairo',
+                  fontWeight: FontWeight.w700,
                   letterSpacing: 1.1,
                 ),
               ),
 
-              Positioned(
-                right: 16,
-                child: Builder(
-                  builder: (context) => IconButton(
-                    icon: const Icon(
-                      Icons.menu,
-                      color: AppColors.secondaryColor,
+              if (showMenu)
+                Positioned(
+                  right: 16,
+                  child: Builder(
+                    builder: (context) => IconButton(
+                      icon: const Icon(
+                        Icons.menu,
+                        color: AppColors.secondaryColor,
+                      ),
+                      onPressed: () {
+                        Scaffold.of(context).openDrawer();
+                      },
                     ),
-                    onPressed: () {
-                      Scaffold.of(context).openDrawer();
-                    },
                   ),
                 ),
-              ),
             ],
           ),
         ),

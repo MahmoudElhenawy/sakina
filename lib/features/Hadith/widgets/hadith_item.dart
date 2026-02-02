@@ -65,7 +65,7 @@ class HadithItem extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 16),
+            const SizedBox(height: 10),
 
             Expanded(
               child: Text(

@@ -4,11 +4,13 @@ import 'package:sakina/core/utils/constant.dart';
 class QuranSearchBar extends StatelessWidget {
   final ValueChanged<String> onChanged;
   final TextEditingController controller;
+  final String hintText;
 
   const QuranSearchBar({
     super.key,
     required this.onChanged,
     required this.controller,
+    this.hintText = 'ابحث...',
   });
 
   @override
@@ -32,9 +34,13 @@ class QuranSearchBar extends StatelessWidget {
               onChanged: onChanged,
               style: const TextStyle(color: Color(0xFFF9FAF8), fontSize: 15),
               cursorColor: AppColors.secondaryColor,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 border: InputBorder.none,
-                hintText: 'ابحث عن سورة...',
+                hintText: hintText,
+                hintStyle: TextStyle(
+                  color: AppColors.secondaryColor.withOpacity(0.7),
+                  fontSize: 15,
+                ),
               ),
             ),
           ),

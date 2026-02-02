@@ -33,7 +33,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => QuranReaderCubit(), // 👈 هنا بس
+      create: (_) => QuranReaderCubit(),
       child: Scaffold(
         backgroundColor: AppColors.backgroundScaffold,
 

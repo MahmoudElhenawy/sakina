@@ -1,7 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:sakina/core/utils/constant.dart';
+import 'package:sakina/core/widgets/custom_app_bar.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer();
@@ -13,44 +15,35 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 20),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 40),
-            decoration: const BoxDecoration(
-              color: AppColors.cardBackground,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(24),
-                bottomRight: Radius.circular(24),
-              ),
-            ),
-            child: const Text(
-              'سَكِينَة',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: AppColors.secondaryColor,
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
+          CustomAppBar(showMenu: false),
 
           const SizedBox(height: 16),
 
-          _drawerItem(Icons.menu_book, ''),
-          _drawerItem(Icons.favorite, 'الأذكار'),
-          _drawerItem(Icons.access_time, 'مواعيد الصلاة'),
-          _drawerItem(Icons.settings, 'الإعدادات'),
+          _drawerItem('assets/images/tasbih.svg', 'السبحة الإلكترونية'),
+          _drawerItem('assets/images/qbla.svg', ' القبلة'),
+          _drawerItem('assets/images/werd.svg', 'الورد اليومي'),
+
+          // _drawerItem('assets/images/settings.svg', 'الإعدادات'),
         ],
       ),
     );
   }
 
-  Widget _drawerItem(IconData icon, String title) {
+  Widget _drawerItem(String iconPath, String title) {
     return ListTile(
-      leading: Icon(icon, color: AppColors.secondaryColor),
+      leading: SvgPicture.asset(
+        iconPath,
+        color: AppColors.secondaryColor,
+        width: 22,
+      ),
       title: Text(
         title,
-        style: const TextStyle(fontSize: 15, color: AppColors.textPrimary),
+        style: const TextStyle(
+          fontSize: 18,
+          fontFamily: 'cairo',
+          fontWeight: FontWeight.w700,
+          color: Color(0xFFF9FAF8),
+        ),
       ),
       onTap: () {},
     );

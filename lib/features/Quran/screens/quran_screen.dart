@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 import 'package:sakina/core/utils/app_routers.dart';
 import 'package:sakina/core/utils/constant.dart';
 import 'package:sakina/core/widgets/app_drawer.dart';
@@ -41,6 +40,7 @@ class _QuranScreenState extends State<QuranScreen> {
             children: [
               QuranSearchBar(
                 controller: _searchController,
+                hintText: 'ابحث عن سورة...',
                 onChanged: (value) {
                   context.read<QuranCubit>().search(value);
                 },
