@@ -46,7 +46,7 @@ class _AdhkarScreenState extends State<AdhkarScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: QuranSearchBar(
                       onChanged: (value) {
-                        //context.read<AzkarCubit>().filterCategories(value);
+                        context.read<AzkarCubit>().filterCategories(value);
                       },
                       controller: controller,
                       hintText: 'ابحث عن الأذكار...',

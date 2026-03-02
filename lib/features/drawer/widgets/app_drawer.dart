@@ -4,7 +4,6 @@ import 'package:sakina/core/utils/constant.dart';
 import 'package:sakina/core/widgets/custom_app_bar.dart';
 import 'package:sakina/features/drawer/screens/qibla_screen.dart';
 import 'package:sakina/features/drawer/screens/tasbih_screen.dart';
-import 'package:sakina/features/drawer/screens/werd_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -33,13 +32,6 @@ class AppDrawer extends StatelessWidget {
             'assets/images/qbla.svg',
             'القبلة',
             const QiblaScreen(),
-          ),
-
-          _drawerItem(
-            context,
-            'assets/images/werd.svg',
-            'الورد اليومي',
-            const WerdScreen(),
           ),
         ],
       ),
