@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:sakina/core/utils/constant.dart';
-import 'package:sakina/core/widgets/app_drawer.dart';
+import 'package:sakina/features/drawer/widgets/app_drawer.dart';
 import 'package:sakina/core/widgets/custom_app_bar.dart';
 import 'package:sakina/features/Hadith/controllers/HadithCubit/hadith_cubit.dart';
 import 'package:sakina/features/Hadith/controllers/HadithCubit/hadith_state.dart';

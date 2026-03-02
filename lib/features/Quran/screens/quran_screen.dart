@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sakina/core/utils/app_routers.dart';
 import 'package:sakina/core/utils/constant.dart';
-import 'package:sakina/core/widgets/app_drawer.dart';
+import 'package:sakina/features/drawer/widgets/app_drawer.dart';
 import 'package:sakina/core/widgets/custom_app_bar.dart';
 import 'package:sakina/features/Quran/controllers/cubit/quran_cubit.dart';
 import 'package:sakina/features/Quran/controllers/cubit/quran_state.dart';
