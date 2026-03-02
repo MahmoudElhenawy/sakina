@@ -1,22 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:sakina/core/utils/app_routers.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:sakina/core/utils/constant.dart';
+import 'package:sakina/core/utils/app_system_ui.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: AppColors.cardBackground,
-      statusBarIconBrightness: Brightness.light,
-      statusBarBrightness: Brightness.dark,
-      systemNavigationBarIconBrightness: Brightness.light,
-    ),
-  );
+  AppSystemUI.init();
   runApp(const Sakina());
 }
 

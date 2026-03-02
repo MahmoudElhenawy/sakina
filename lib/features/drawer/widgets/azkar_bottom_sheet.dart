@@ -119,15 +119,7 @@ class AzkarBottomSheet extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
-            Text(
-              zekr.transliteration,
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                fontSize: 13,
-                color: AppColors.textPrimary.withOpacity(0.6),
-                fontStyle: FontStyle.italic,
-              ),
-            ),
+
             if (zekr.reward != null) ...[
               const SizedBox(height: 8),
               Row(

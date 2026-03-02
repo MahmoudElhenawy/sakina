@@ -67,15 +67,6 @@ class SelectedZekr extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            state.selectedZekr!.transliteration,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14,
-              color: AppColors.textPrimary.withOpacity(0.7),
-              fontStyle: FontStyle.italic,
-            ),
-          ),
         ],
       ),
     );

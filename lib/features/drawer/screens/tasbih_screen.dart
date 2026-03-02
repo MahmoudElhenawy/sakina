@@ -7,33 +7,36 @@ import 'package:sakina/features/drawer/widgets/tasbih_body.dart';
 
 class TasbihScreen extends StatelessWidget {
   const TasbihScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => TasbihCubit(),
-      child: Scaffold(
-        backgroundColor: AppColors.cardBackground.withOpacity(0.95),
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          title: const Text(
-            'السبحة الإلكترونية',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-              color: AppColors.goldLight,
+      child: Builder(
+        builder: (context) {
+          return Scaffold(
+            backgroundColor: AppColors.cardBackground.withOpacity(0.95),
+            appBar: AppBar(
+              elevation: 0,
+              backgroundColor: Colors.transparent,
+              title: const Text(
+                'السبحة الإلكترونية',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: AppColors.goldLight,
+                ),
+              ),
+              centerTitle: true,
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.refresh, color: AppColors.goldMedium),
+                  onPressed: () => _showResetDialog(context),
+                ),
+              ],
             ),
-          ),
-          centerTitle: true,
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.refresh, color: AppColors.goldMedium),
-              onPressed: () => _showResetDialog(context),
-            ),
-          ],
-        ),
-        body: const TasbihBody(),
+            body: const TasbihBody(),
+          );
+        },
       ),
     );
   }

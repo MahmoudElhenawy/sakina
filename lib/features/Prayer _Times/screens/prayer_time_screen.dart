@@ -12,6 +12,8 @@ class PrayerTimeScreen extends StatelessWidget {
     return BlocProvider(
       create: (_) => PrayerTimeCubit()..loadPrayerTimes(),
       child: Scaffold(
+        extendBody: true,
+
         backgroundColor: AppColors.cardBackground.withOpacity(0.95),
         appBar: AppBar(
           elevation: 0,
