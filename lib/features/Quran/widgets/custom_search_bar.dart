@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sakina/core/utils/constant.dart';
 
-class QuranSearchBar extends StatelessWidget {
+class CustomSearchBar extends StatelessWidget {
   final ValueChanged<String> onChanged;
   final TextEditingController controller;
   final String hintText;
 
-  const QuranSearchBar({
+  const CustomSearchBar({
     super.key,
     required this.onChanged,
     required this.controller,

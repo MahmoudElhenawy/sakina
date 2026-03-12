@@ -33,13 +33,13 @@ class LocationHeader extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.location_on, color: Colors.white, size: 20),
+              Icon(Icons.location_on, color: AppColors.whiteColor, size: 20),
               const SizedBox(width: 8),
               Text(
                 locationName,
                 style: const TextStyle(
                   fontSize: 16,
-                  color: Colors.white,
+                  color: AppColors.whiteColor,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -51,7 +51,7 @@ class LocationHeader extends StatelessWidget {
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 16,
-              color: Colors.white,
+              color: AppColors.whiteColor,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -61,7 +61,7 @@ class LocationHeader extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.white.withOpacity(0.9),
+              color: AppColors.whiteColor.withOpacity(0.9),
             ),
           ),
         ],

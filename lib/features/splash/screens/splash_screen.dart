@@ -31,7 +31,7 @@ class SplashScreen extends StatelessWidget {
                   'سَكِينَة',
                   style: Styles.textStyle30.copyWith(
                     fontSize: 56,
-                    color: const Color(0xFFF9FAF8),
+                    color: AppColors.logoColor,
                     letterSpacing: 1.2,
                   ),
                 ),

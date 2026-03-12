@@ -18,6 +18,8 @@ class AppColors {
   // لون النص الثانوي - ذهبي فاتح/كريمي
   static const Color secondaryText = Color(0xFFc9b896);
 
+  static const Color whiteColor = Color(0xffffffff);
+
   // ===== ألوان النصوص =====
 
   // النص الرئيسي - أبيض نقي تقريباً
@@ -95,4 +97,5 @@ class AppColors {
 
   // ظل ذهبي - للعناصر المميزة
   static const Color shadowGold = Color(0x1Fd4af37);
+  static const Color logoColor = Color(0xFFF9FAF8);
 }

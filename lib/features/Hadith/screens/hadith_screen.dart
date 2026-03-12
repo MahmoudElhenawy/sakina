@@ -8,7 +8,7 @@ import 'package:sakina/features/Hadith/controllers/HadithCubit/hadith_cubit.dart
 import 'package:sakina/features/Hadith/controllers/HadithCubit/hadith_state.dart';
 import 'package:sakina/features/Hadith/screens/hadith_book_screen.dart';
 import 'package:sakina/features/Hadith/widgets/hadith_item.dart';
-import 'package:sakina/features/Quran/widgets/quran_search_bar.dart';
+import 'package:sakina/features/Quran/widgets/custom_search_bar.dart';
 
 class HadithScreen extends StatefulWidget {
   const HadithScreen({super.key});
@@ -38,7 +38,7 @@ class _HadithScreenState extends State<HadithScreen> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              QuranSearchBar(
+              CustomSearchBar(
                 hintText: 'ابحث عن الحديث...',
                 controller: controller,
                 onChanged: (q) {

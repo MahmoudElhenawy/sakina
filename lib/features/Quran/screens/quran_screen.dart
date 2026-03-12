@@ -7,7 +7,7 @@ import 'package:sakina/features/drawer/widgets/app_drawer.dart';
 import 'package:sakina/core/widgets/custom_app_bar.dart';
 import 'package:sakina/features/Quran/controllers/cubit/quran_cubit.dart';
 import 'package:sakina/features/Quran/controllers/cubit/quran_state.dart';
-import 'package:sakina/features/Quran/widgets/quran_search_bar.dart';
+import 'package:sakina/features/Quran/widgets/custom_search_bar.dart';
 import 'package:sakina/features/Quran/widgets/surah_item.dart';
 
 class QuranScreen extends StatefulWidget {
@@ -38,7 +38,7 @@ class _QuranScreenState extends State<QuranScreen> {
           padding: const EdgeInsets.all(20),
           child: Column(
             children: [
-              QuranSearchBar(
+              CustomSearchBar(
                 controller: _searchController,
                 hintText: 'ابحث عن سورة...',
                 onChanged: (value) {

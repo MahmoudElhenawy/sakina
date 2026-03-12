@@ -7,7 +7,7 @@ import 'package:sakina/features/Adhkar/controllers/azkar_cubit.dart';
 import 'package:sakina/features/Adhkar/controllers/azkar_state.dart';
 import 'package:sakina/features/Adhkar/repo/adhkar_repository.dart';
 import 'package:sakina/features/Adhkar/screens/azkar_list_screen.dart';
-import 'package:sakina/features/Quran/widgets/quran_search_bar.dart';
+import 'package:sakina/features/Quran/widgets/custom_search_bar.dart';
 import '../widgets/category_card.dart';
 
 class AdhkarScreen extends StatefulWidget {
@@ -44,7 +44,7 @@ class _AdhkarScreenState extends State<AdhkarScreen> {
                 Builder(
                   builder: (context) => Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: QuranSearchBar(
+                    child: CustomSearchBar(
                       onChanged: (value) {
                         context.read<AzkarCubit>().filterCategories(value);
                       },

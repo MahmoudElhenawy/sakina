@@ -50,7 +50,7 @@ class PrayerTimeBody extends StatelessWidget {
                     label: const Text('إعادة المحاولة'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.goldMedium,
-                      foregroundColor: Colors.white,
+                      foregroundColor: AppColors.whiteColor,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 32,
                         vertical: 16,
